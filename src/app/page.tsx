@@ -1,15 +1,15 @@
+import { fetchPokemonRange } from "@/lib/pokeapi";
 import { List } from "./components/list";
 import styles from "./page.module.css";
 
 export default async function Home() {
-  const data = await fetch("https://pokeapi.co/api/v2/pokemon/?limit=20");
-  const response = await data.json();
-  console.log(response.results);
+  const ids = Array.from({ length: 20 }, (_, i) => i + 1);
+  const pokemon = await fetchPokemonRange(ids);
 
   return (
     <main className={styles.main}>
       <h1 className={styles.title}>Pokemon List</h1>
-      <List pokemonList={response.results} />
+      <List pokemonList={pokemon} />
     </main>
   );
 }
