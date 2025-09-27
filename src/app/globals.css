@@ -17,8 +17,9 @@
   --line-height-lg: 20px;
   --line-height-xl: 22px;
   --line-height-2xl: 24px;
-  --line-height-3xl: 28px;
-  --line-height-4xl: 32px;
+  --line-height-3xl: 26px;
+  --line-height-4xl: 28px;
+  --line-height-5xl: 32px;
 
   --font-size-sm: 14px;
   --font-size-md: 16px;
@@ -31,6 +32,7 @@
 
   --text-primary: var(--color-dark-blue);
   --text-secondary: var(--color-light-blue);
+  --text-highlight: var(--color-red);
 
   --surface-primary: var(--color-grey);
   --surface-secondary: var(--color-white);
@@ -61,38 +63,43 @@ body {
   box-sizing: border-box;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
+  margin: 0;
+}
+
 h1 {
   font-size: var(--font-size-5xl);
   line-height: var(--line-height-5xl);
-  margin: var(--spacing-sm) 0;
 }
 
 h2 {
   font-size: var(--font-size-4xl);
   line-height: var(--line-height-4xl);
-  margin: var(--spacing-sm) 0;
 }
 
 h3 {
   font-size: var(--font-size-3xl);
   line-height: var(--line-height-3xl);
-  margin: var(--spacing-sm) 0;
 }
 
 h4 {
   font-size: var(--font-size-2xl);
   line-height: var(--line-height-2xl);
-  margin: var(--spacing-sm) 0;
 }
 
 h5 {
   font-size: var(--font-size-xl);
   line-height: var(--line-height-xl);
-  margin: var(--spacing-sm) 0;
 }
 
 h6 {
   font-size: var(--font-size-lg);
   line-height: var(--line-height-lg);
-  margin: var(--spacing-sm) 0;
 }

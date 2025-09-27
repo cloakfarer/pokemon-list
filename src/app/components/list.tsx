@@ -1,5 +1,7 @@
 import { TPokemon } from "@/models/PokeApi";
 import { FC } from "react";
+import { Card } from "./card";
+import styles from "./list.module.css";
 
 type TProps = {
   pokemonList: TPokemon[];
@@ -7,14 +9,9 @@ type TProps = {
 
 export const List: FC<TProps> = ({ pokemonList }) => {
   return (
-    <div>
+    <div className={styles.list}>
       {pokemonList.map((pokemon) => {
-        return (
-          <div className="pokemon-card" key={pokemon.id}>
-            <h2>{pokemon.name}</h2>
-            <p>{pokemon.id}</p>
-          </div>
-        );
+        return <Card pokemon={pokemon} key={pokemon.id} />;
       })}
     </div>
   );

@@ -9,7 +9,7 @@ export type TPokemon = {
   height: number; // In decimeters
   weight: number; // In hectograms
   types: TPokemonType[];
-  sprites: TPokemonSprite[];
+  sprites: TPokemonSprite;
 };
 
 export type TPokemonType = {
