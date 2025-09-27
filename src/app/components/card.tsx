@@ -1,5 +1,4 @@
 import { TPokemon } from "@/models/PokeApi";
-import Image from "next/image";
 import { FC } from "react";
 import styles from "./card.module.css";
 
@@ -12,7 +11,7 @@ export const Card: FC<TProps> = ({ pokemon }) => {
     <div className={styles.card} key={pokemon.id}>
       <div className={styles.row}>
         <h2>{pokemon.name}</h2>
-        <span className={styles.id}>{pokemon.id}</span>
+        <span className={styles.id}>#{pokemon.id}</span>
       </div>
       {pokemon.sprites.front_default ? (
         <img
@@ -27,10 +26,13 @@ export const Card: FC<TProps> = ({ pokemon }) => {
           className={styles.image}
         />
       )}
-
       <div className={styles.types}>
         {pokemon.types.map((type) => {
-          return <span className={styles.type}>{type.type.name}</span>;
+          return (
+            <span className={styles.type} key={type.type.name}>
+              {type.type.name}
+            </span>
+          );
         })}
       </div>
       <div className={styles.row}>
