@@ -1,4 +1,5 @@
 import { TPokemon } from "@/models/PokeApi";
+import Image from "next/image";
 import { FC } from "react";
 import styles from "./card.module.css";
 import { TypeChip } from "./type-chip";
@@ -15,16 +16,20 @@ export const Card: FC<TProps> = ({ pokemon }) => {
         <span className={styles.id}>#{pokemon.id}</span>
       </div>
       {pokemon.sprites.front_default ? (
-        <img
+        <Image
           src={pokemon.sprites.front_default}
           alt="Picture of a pokemon"
           className={styles.image}
+          width="100"
+          height="100"
         />
       ) : (
-        <img
+        <Image
           src={"/image-unavailable.png"}
           alt="Picture of a pokemon"
           className={styles.image}
+          width="100"
+          height="100"
         />
       )}
       <div className={styles.types}>

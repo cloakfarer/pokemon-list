@@ -29,7 +29,8 @@
 .image {
   width: 100%;
   max-width: 200px;
-  max-height: 200px;
+  height: auto;
   margin: 0 auto;
+  object-fit: contain;
   image-rendering: pixelated;
 }
