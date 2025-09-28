@@ -1,8 +1,8 @@
 import { TPokemon } from "@/models/PokeApi";
 import Image from "next/image";
 import { FC } from "react";
-import styles from "./card.module.css";
 import { TypeChip } from "../type-chip/type-chip";
+import styles from "./card.module.css";
 
 type TProps = {
   pokemon: TPokemon;
@@ -20,8 +20,8 @@ export const Card: FC<TProps> = ({ pokemon }) => {
           src={pokemon.sprites.front_default}
           alt="Picture of a Pokémon"
           className={styles.image}
-          width="100"
-          height="100"
+          width={100}
+          height={100}
           unoptimized
         />
       ) : (
@@ -29,8 +29,8 @@ export const Card: FC<TProps> = ({ pokemon }) => {
           src={"/image-unavailable.png"}
           alt="Image not available"
           className={styles.image}
-          width="100"
-          height="100"
+          width={100}
+          height={100}
           unoptimized
         />
       )}
