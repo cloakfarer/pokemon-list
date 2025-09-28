@@ -1,13 +1,12 @@
-import { TPokemon } from "@/models/PokeApi";
+import { fetchPokemonRange } from "@/lib/pokeapi";
 import { FC } from "react";
-import { Card } from "./card";
+import { Card } from "../card/card";
 import styles from "./list.module.css";
 
-type TProps = {
-  pokemonList: TPokemon[];
-};
+export const List: FC = async () => {
+  const ids = Array.from({ length: 20 }, (_, i) => i + 1);
+  const pokemonList = await fetchPokemonRange(ids);
 
-export const List: FC<TProps> = ({ pokemonList }) => {
   return (
     <div className={styles.list}>
       {pokemonList.map((pokemon) => {

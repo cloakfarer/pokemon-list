@@ -1,0 +1,37 @@
+.wrap {
+  display: flex;
+  justify-content: center;
+  width: 120px;
+  height: 80px;
+}
+
+.ball {
+  image-rendering: pixelated;
+  transform-origin: 50% 80%;
+  animation: swing 900ms ease-in-out infinite alternate,
+    bob 900ms ease-in-out infinite alternate;
+}
+
+@keyframes swing {
+  0% {
+    transform: rotate(-18deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(18deg);
+  }
+}
+
+@keyframes bob {
+  0% {
+    translate: 0 0;
+  }
+  50% {
+    translate: 0 3px;
+  }
+  100% {
+    translate: 0 0;
+  }
+}
