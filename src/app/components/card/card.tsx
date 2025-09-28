@@ -41,7 +41,7 @@ export const Card: FC<TProps> = ({ pokemon }) => {
       </div>
       <div className={styles.row}>
         <span>Height: </span>
-        <span>{pokemon.height * 10} cm</span>
+        <span>{pokemon.height / 10} m</span>
       </div>
       <div className={styles.row}>
         <span>Weight: </span>
