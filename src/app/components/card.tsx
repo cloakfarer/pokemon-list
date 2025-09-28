@@ -1,6 +1,7 @@
 import { TPokemon } from "@/models/PokeApi";
 import { FC } from "react";
 import styles from "./card.module.css";
+import { TypeChip } from "./type-chip";
 
 type TProps = {
   pokemon: TPokemon;
@@ -28,11 +29,7 @@ export const Card: FC<TProps> = ({ pokemon }) => {
       )}
       <div className={styles.types}>
         {pokemon.types.map((type) => {
-          return (
-            <span className={styles.type} key={type.type.name}>
-              {type.type.name}
-            </span>
-          );
+          return <TypeChip type={type.type.name} key={type.type.name} />;
         })}
       </div>
       <div className={styles.row}>

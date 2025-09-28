@@ -26,13 +26,6 @@
   gap: var(--spacing-sm);
 }
 
-.type {
-  padding: var(--spacing-sm);
-  background-color: var(--surface-primary);
-  border-radius: var(--spacing-md);
-  color: var(--text-secondary);
-}
-
 .image {
   width: 100%;
   max-width: 200px;
