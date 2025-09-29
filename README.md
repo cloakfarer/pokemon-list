@@ -2,7 +2,7 @@
 
 This is a [Next.js](https://nextjs.org) project using TypeScript bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-It's purpose is to display a list of the first 20 Pokémon sorted by ID.
+Its purpose is to display a list of the first 20 Pokémon sorted by ID.
 
 ## Getting Started
 
